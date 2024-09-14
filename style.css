@@ -1,0 +1,1387 @@
+/* Estilo Geral */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: black;
+    height: 100vh;
+
+}
+
+.interface {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.flex {
+    display: flex;
+}
+
+.btnContato button {
+    padding: 10px 40px;
+    font-size: 18px;
+    font-weight: 700;
+    background-color: blue;
+    border: 0;
+    border-radius: 30px;
+    cursor: pointer;
+    color: rgb(183, 183, 183);
+    display: inline-block;
+    transition: .2s;
+}
+
+.btnContato button:hover,
+form btnEnviar input:hover {
+    box-shadow: 0px 0px 10px rgb(80, 80, 255);
+    color: white;
+    transform: scale(1.05);
+}
+
+h2.titulo {
+    color: white;
+    font-size: 39px;
+    text-align: center;
+    margin-bottom: 40px;
+    /* Adiciona espaço abaixo do título */
+}
+
+h2.titulo span {
+    color: blue;
+}
+
+/* Estilo do cabeçalho */
+header {
+    padding: 40px 4%;
+}
+
+header>.interface {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header a {
+    color: rgb(183, 183, 183);
+    text-decoration: none;
+    display: inline-block;
+    transition: .2s;
+}
+
+header nav.menuDesktop a:hover {
+    color: white;
+    transform: scale(1.05);
+}
+
+header nav ul {
+    list-style-type: none;
+}
+
+header nav.menuDesktop li {
+    display: inline-block;
+    padding: 0 40px;
+}
+
+
+@media (max-width: 768px) {
+  .body  .btnContato{
+    display: grid;
+  }
+}
+
+/* Menu Mobile */
+.btnAbrir i {
+    color: blue;
+    font-size: 35px;
+    cursor: pointer;
+}
+
+.menu-mobile {
+    background-color: blue;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 999999;
+    width: 0;
+    overflow: hidden;
+    transition: width 0.5s ease;
+}
+
+.menu-mobile.open {
+    width: 70%;
+}
+
+.overlayMenu {
+    background-color: rgba(0, 0, 0, 0.538);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 88888;
+    display: none;
+    transition: display 0.5s ease;
+}
+
+.overlayMenu.active {
+    display: block;
+}
+
+.menu-mobile nav ul {
+    text-align: right;
+    margin-top: 20px;
+}
+
+.menu-mobile nav li a {
+    color: white;
+    font-size: 20px;
+    font-weight: 300;
+    padding: 20px 8%;
+    display: block;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.menu-mobile nav ul li a:hover {
+    background-color: rgb(0, 0, 0);
+    color: white;
+}
+
+.menu-mobile .btnFechar {
+    padding: 20px 5%;
+    cursor: pointer;
+}
+
+.menu-mobile .btnFechar i {
+    color: rgb(0, 0, 0);
+    font-size: 30px;
+}
+
+@media (max-width: 1020px) {
+    /* Oculta o menu desktop em dispositivos móveis */
+    .menuDesktop {
+        display: none;
+    }
+
+    /* Exibe o menu mobile em dispositivos móveis */
+    .menu-mobile {
+        display: block;
+    }
+ 
+
+
+    
+}
+
+@media (min-width: 1021px) {
+    /* Exibe o menu desktop e oculta o menu mobile em telas maiores */
+    .menuDesktop {
+        display: block;
+    }
+
+    .menu-mobile {
+        display: none;
+    }
+
+    .btnAbrir {
+        display: none;
+    }
+}
+
+/* Layout das Habilidades */
+.habilidades {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px; /* Ajuste o espaçamento conforme necessário */
+}
+
+.habilidadesBox {
+    flex: 1 1 calc(33.33% - 20px); /* 3 colunas no desktop */
+    box-sizing: border-box;
+}
+
+@media (max-width: 768px) {
+    .habilidadesBox {
+        flex: 1 1 calc(50% - 20px); /* 2 colunas em tablets e dispositivos móveis */
+        
+    }
+
+ 
+}
+
+
+
+@media (max-width: 480px) {
+
+   
+    .habilidades {
+        display: block; /* Remove o flexbox */
+    }
+
+    .habilidadesBox {
+        width: 100%; /* Cada habilidade ocupa toda a largura disponível */
+        margin-bottom: 20px; /* Espaçamento entre as habilidades */
+         
+    }
+
+    /* Remove o espaçamento da última habilidade para manter o layout limpo */
+    .habilidadesBox:last-child {
+        margin-bottom: 0;
+    }
+}
+
+@media (max-width: 768px) {
+    .habilidades .flex {
+        display: block;
+        grid-template-columns: repeat(2, 1fr); /* 2 colunas */
+        gap: 28px; /* Espaçamento entre os itens */
+      
+    }
+}
+
+@media (max-width: 480px) {
+    .habilidades .habilidadesBox {
+        display: block;
+        grid-template-columns: 2fr; /* 1 coluna */
+        align-items: center;
+        gap: 28px;
+    }
+}
+
+@media (max-width: 768px) {
+    .logo {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 20px; /* Adiciona um espaçamento */
+    }
+
+    .btnContato {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 20px; /* Espaçamento */
+    }
+}
+
+@media (max-width: 768px) {
+    section#projetos {
+        display: block !important;
+        opacity: 1 !important;
+        visibility: visible !important;
+    }
+
+    .Projetos .flex {
+        display: grid !important;
+        grid-template-columns: 1fr !important;
+        gap: 20px !important;
+    }
+
+    .imgProj {
+        width: 100% !important;
+        height: auto !important;
+    }
+}
+
+@media (max-width: 768px) {
+    section#projetos {
+        display: block !important;
+        opacity: 1 !important;
+        visibility: visible !important;
+    }
+
+    .Projetos .flex {
+        display: grid !important;
+        grid-template-columns: 1fr !important;
+        gap: 20px !important;
+    }
+
+    .imgProj {
+        width: 100% !important;
+        height: auto !important;
+    }
+}
+
+@media (max-width: 768px) {
+    .Projetos {
+        display: block; /* Ou outro valor que garanta a exibição */
+    }
+    .Projetos {
+        width: 100%; /* Certifique-se de que ocupa a largura total disponível */
+        box-sizing: border-box; /* Inclui padding e border no cálculo da largura total */
+    }
+    @media (max-width: 768px) {
+        .flex {
+            flex-direction: column; /* Para empilhar os itens verticalmente no mobile */
+        }
+    }
+    
+}
+
+
+
+
+
+
+    .overlay {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100%; /* Garante que a sobreposição cubra toda a imagem */
+    }
+
+    .text {
+        text-align: center; /* Centraliza o texto dentro da sobreposição */
+        color: white;
+        background-color: rgba(0, 0, 0, 0.5); /* Fundo semi-transparente para melhor leitura */
+        padding: 10px;
+    }
+
+
+
+
+
+
+
+
+
+
+/* Estilo do Topo do site */
+section.topoDoSite {
+    padding: 100px 4%;
+}
+
+
+section.topoDoSite .flex {
+    align-items: center;
+    justify-content: center;
+    gap: 90px;
+}
+h1#txtprincipal {
+    
+   
+    margin-bottom: 0 !important; /* Remove a margem inferior do h1 */
+    }
+    
+    p.pfs {
+        
+        color: blue !important;
+        font-weight: 800 !important;
+    margin-top: 0 !important; /* Remove a margem superior do parágrafo */
+    }
+    
+    
+
+.topoDoSite h1 {
+    color: white;
+    font-size: 42px;
+    line-height: 40px;
+}
+
+.topoDoSite h1 span {
+    color: #0000ff;
+}
+
+.topoDoSite p span {
+    color: #0000ff;
+}
+
+.topoDoSite p {
+    color: white;
+    margin: 40px 0;
+}
+
+.topoDoSite .imgTopoSite img {
+    position: relative;
+    animation: flutuar 2s ease-in-out infinite alternate;
+}
+
+.imgTopoSite img {
+    box-shadow: 0 0 40px rgba(0, 0, 255, 1),
+                0 0 60px rgba(0, 0, 255, 1),
+                0 0 80px rgba(0, 0, 255, 1);
+    animation: neonBlink 1.5s infinite alternate;
+    border-radius: 50%; /* Deixa a imagem redonda */
+}
+
+@keyframes neonBlink {
+    0% {
+        box-shadow: 0 0 10px rgba(0, 0, 255, 0.2),
+                    0 0 20px rgba(0, 0, 255, 0.2),
+                    0 0 30px rgba(0, 0, 255, 0.2);
+    }
+    100% {
+        box-shadow: 0 0 40px rgba(0, 0, 255, 1),
+                    0 0 60px rgba(0, 0, 255, 1),
+                    0 0 80px rgba(0, 0, 255, 1);
+    }
+}
+
+
+@keyframes flutuar {
+    0% {
+        top: 0;
+    }
+
+    100% {
+        top: 30px;
+    }
+}
+
+section.habilidades {
+    padding: 40px 4%;
+}
+
+/* Ajuste para exibir 3 ícones por linha */
+section.habilidades .flex {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    /* 3 colunas de tamanho igual */
+    gap: 28px;
+    /* Espaçamento entre os itens */
+}
+@media (max-width: 768px) {
+    section.habilidades .flex {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr); /* 1 coluna de tamanho igual */
+        gap: 28px; /* Espaçamento entre os itens */
+
+    }
+
+ 
+}
+
+
+.habilidades .habilidadesBox {
+    color: white;
+    padding: 20px;
+    border-radius: 20px;
+    transition: .3s;
+    text-align: center;
+    /* Centraliza o texto */
+    background-color: #333;
+    /* Fundo para melhorar a visibilidade */
+}
+
+.habilidades .habilidadesBox:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 10px rgba(0, 0, 255, 0.5);
+}
+
+.habilidades .habilidadesBox i {
+    font-size: 60px;
+    color: white;
+    transition: color 0.3s;
+    /* Transição suave para a cor do ícone */
+}
+
+.habilidades .habilidadesBox:hover i {
+    color: blue;
+    /* Cor azul para o ícone ao passar o mouse */
+}
+
+.habilidades .habilidadesBox h3 {
+    font-size: 22px;
+    margin: 15px 0;
+    color: blue;
+    /* Cor padrão do título */
+    transition: color 0.3s;
+    /* Transição suave para a cor do título */
+}
+
+.habilidades .habilidadesBox:hover h3 {
+    color: white;
+    /* Título fica branco ao passar o mouse */
+}
+
+.habilidades .habilidadesBox p {
+    font-size: 16px;
+    margin: 0;
+}
+
+section.Sobre {
+    padding: 60px 4%;
+    /* Espaço geral ao redor da seção */
+    display: flex;
+    align-items: flex-start;
+    /* Alinha os itens no topo */
+    justify-content: center;
+    gap: 40px;
+    /* Espaço entre imagem e texto */
+}
+
+.Sobre .imgSobre {
+    flex: 1;
+    /* Ajusta a imagem proporcionalmente */
+    text-align: center;
+    /* Centraliza a imagem dentro do seu contêiner */
+    margin-right: 30px;
+    /* Espaço adicional à direita da imagem */
+}
+
+.Sobre .imgSobre img {
+    max-width: 100%;
+    /* Garante que a imagem se ajuste ao contêiner */
+    height: auto;
+    /* Mantém a proporção da imagem */
+    border-radius: 20px;
+    /* Bordas arredondadas */
+    
+}
+
+.Sobre .txtsobre {
+    flex: 2;
+    /* Dá mais espaço ao texto em comparação com a imagem */
+    color: white;
+}
+
+.Sobre .txtsobre h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    /* Espaço abaixo do título */
+}
+
+.Sobre .txtsobre p {
+    font-size: 18px;
+    line-height: 1.8;
+    /* Melhora a legibilidade do texto */
+    margin: 0;
+    /* Remove a margem padrão do parágrafo */
+    margin-top: 10px;
+    /* Espaço acima do texto */
+}
+
+.Sobre h2 span,
+.Sobre p span {
+    color: blue;
+}
+
+@keyframes subtlePulse {
+    0% {
+        transform: scale(1);
+        color: blue;
+    }
+
+    50% {
+        transform: scale(1.05);
+        color: lightblue;
+    }
+
+    100% {
+        transform: scale(1);
+        color: blue;
+    }
+}
+
+.Sobre h2 span:hover,
+.Sobre p span:hover {
+    animation: subtlePulse 1s ease-in-out;
+    /* Aplica a animação suave ao passar o mouse */
+}
+
+.Sobre .txtsobre .btnSocial {
+    display: flex;
+    gap: 15px;
+    /* Espaço entre os botões sociais */
+    margin-top: 20px;
+    /* Espaço acima dos botões sociais */
+}
+
+.Sobre .txtsobre .btnSocial a {
+    text-decoration: none;
+    /* Remove o traço dos links */
+}
+
+.btnSocial button {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    /* Botões circulares */
+    border: 0;
+    background-color: blue;
+    color: white;
+    font-size: 24px;
+    /* Tamanho do ícone */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.Sobre .txtsobre .btnSocial button:hover {
+    background-color: darkblue;
+    /* Muda a cor ao passar o mouse */
+    transform: scale(1.1);
+    /* Aumenta o tamanho ao passar o mouse */
+}
+
+
+/* ESTILO PROJETO */
+
+section.Projetos {
+    padding: 80px 4%;
+    box-shadow: 0 0 40px 10px rgba(255, 255, 255, 0.068);
+}
+
+section.Projetos .flex {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 40px; /* Espaço entre os itens */
+}
+
+.imgProj {
+    position: relative;
+    flex: 1 1 calc(33.333% - 40px); /* Mantém 3 itens por linha */
+    max-width: 360px;
+    height: 460px;
+    background-color: blue;
+    background-size: cover;
+    background-position: 100% 0%;
+    transition: 9s;
+    cursor: pointer;
+    border-radius: 40px;
+    overflow: hidden;
+}
+
+
+
+
+
+.imgProj:hover {
+    background-position: 100% 100%; /* Efeito de rolagem */
+}
+
+.imgProj .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6); /* Sobreposição semitransparente */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    border-radius: 40px;
+}
+
+
+
+.imgProj:hover .overlay {
+    opacity: 1;
+}
+
+.imgProj .overlay .text h3 {
+    /* Estilos para o h3 */
+    color: #ffffff; /* Exemplo de cor do texto */
+    font-size: 24px; /* Exemplo de tamanho da fonte */
+    text-align: center; /* Exemplo de alinhamento do texto */
+    font-weight: 700;
+}
+
+.imgProj .overlay .text p {
+    /* Estilos para os p */
+    color: #ffffff; /* Exemplo de cor do texto */
+    font-size: 16px; /* Exemplo de tamanho da fonte */
+    margin: 5px 0; /* Exemplo de margem para os parágrafos */
+    text-align: center; /* Exemplo de alinhamento do texto */
+    font-weight: 700;
+}  
+
+
+section.formulario {
+    padding: 80px 4%;
+}
+
+form {
+    max-width: 500px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 40px;
+
+}
+
+form input,
+form textarea {
+    width: 100%;
+    background-color: rgb(255, 255, 255);
+    border: 0;
+    outline: 0;
+    padding: 20px 15px;
+    border-radius: 15px;
+    color: rgb(0, 0, 0);
+    font-size: 18px;
+
+}
+
+form input::placeholder {
+    color: blue;
+}
+
+form textarea {
+    resize: none;
+    max-height: 210px;
+}
+
+form textarea::placeholder {
+    color: blue;
+}
+
+form btnEnviar {
+    margin-top: 20px;
+
+}
+
+form btnEnviar {
+    margin-top: 20px;
+
+}
+
+form btnEnviar input {
+    width: 120px;
+    text-align: center;
+    background-color: blue;
+    color: blue;
+    font-weight: 700;
+    cursor: pointer;
+    transition: .2s;
+}
+
+
+/* ESTILO FOOTER */
+
+footer {
+    padding: 60px 4%;
+    box-shadow: 0 0 40px 10px rgba(255, 255, 255, 0.068);
+}
+
+footer .flex {
+    justify-content: space-between;
+
+}
+
+footer .lineFooter {
+    padding: 20px;
+}
+
+.borda {
+    border-top: 2px solid blue;
+}
+
+footer .lineFooter p i {
+    color: blue;
+    font-size: 22px;
+}
+
+footer .lineFooter p a {
+    color: white;
+}
+
+footer .btnSocial a {
+    text-decoration: none;
+    /* Remove o sublinhado */
+}
+
+footer .btnSocial {
+    display: flex;
+    gap: 15px;
+    /* Espaço entre os botões */
+}
+
+footer .btnSocial {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /* ou 'center', dependendo da sua preferência */
+    gap: 15px;
+    /* Espaço entre os botões */
+}
+
+footer .btnSocial button {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    border: 0;
+    background-color: blue;
+    color: white;
+    font-size: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+footer .btnSocial button:hover {
+    background-color: darkblue;
+    /* Cor ao passar o mouse */
+    transform: scale(1.1);
+    /* Aumenta o tamanho ao passar o mouse */
+}
+
+
+/* Estilo do menu com animação */
+.menuDesktop {
+    opacity: 0;
+    /* Inicialmente invisível */
+    transform: translateY(-20px);
+    /* Inicialmente deslocado para cima */
+    transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+    /* Transição suave */
+}
+
+.menuDesktop.visible {
+    opacity: 1;
+    /* Totalmente visível */
+    transform: translateY(0);
+    /* Volta à posição original */
+}
+
+section {
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+section.visible {
+    opacity: 1;
+}
+
+
+@media screen and (max-width: 1020px) {
+    
+    /* Geral */
+    .flex {
+        flex-direction: column-reverse;
+    }
+
+    .topoDoSite .flex {
+        flex-direction: column-reverse;
+    }
+
+    /* Cabeçalho */
+    .menuDesktop,
+    .btnContato {
+        display: none;
+    }
+
+    section.topoDoSite {
+        padding: 20px 8%;
+    }
+
+    .topoDoSite h1 {
+        color: white;
+        font-size: 30px;
+    }
+
+    .topoDoSite .imgTopoSite img {
+        width: 100%;
+    }
+
+    section.topoDoSite .flex {
+        gap: 40px;
+    }
+
+    section.habilidades {
+        padding: 40px 5%;
+        
+    }
+
+    h2.titulo {
+        font-size: 34px;
+        line-height: 30px;
+    }
+
+    section.Sobre {
+        padding: 80px 8%;
+    
+    }
+
+    .Sobre .txtsobre h2 {
+    font-size: 34px;
+   line-height: 35px;
+   text-align: center;
+}
+
+.Sobre .txtsobre p{
+    text-align: center;
+}
+
+.Sobre .txtsobre .btnSocial {
+    display: flex;
+    gap: 15px;
+    margin-top: 20px;
+    /* Espaço acima dos botões sociais */
+    justify-content: center; /* Centraliza horizontalmente os botões */
+}
+
+
+
+ /* Ajuste para o flex da seção de projetos */
+ section.Projetos .flex {
+    flex-direction: column; /* Altera para exibir em coluna no mobile */
+    gap: 20px; /* Adiciona espaçamento entre os itens */
+    height: auto;
+    
+    
+}
+
+.imgProj {
+    width: 100%;
+    height: 300px;
+    z-index: 1;
+    margin-bottom: 20px; /* Adiciona espaço inferior entre os projetos */
+    
+}
+
+.overlay {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 10px; /* Ajuste de padding para o texto */
+}
+
+.text {
+    font-size: 16px; /* Ajuste do tamanho da fonte para mobile */
+}
+
+/* Outros ajustes gerais, se necessário */
+section.Projetos {
+    padding: 20px 5%; /* Ajuste o padding para se adequar melhor ao mobile */
+}
+
+  
+
+
+    footer .flex{
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    footer .lineFooter{
+        text-align: center;
+    }
+
+
+}
+
+@media screen and (max-width: 1020px) {
+    /* Esconde a lista de projetos no mobile */
+    section.Projetos .flex {
+        display: none;
+    }
+
+    /* Estilo para centralizar o texto e o ícone */
+    .github-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100vh; /* Centraliza verticalmente */
+        text-align: center;
+    }
+
+    .github-container h2 {
+        font-size: 24px; /* Tamanho do texto "MEUS PROJETOS:" */
+        margin-bottom: 20px; /* Espaçamento entre o texto e o ícone */
+    }
+
+    .github-container a {
+        font-size: 60px; /* Tamanho do ícone */
+        color: #333; /* Cor do ícone */
+    }
+
+    .github-container a:hover {
+        color: #4078c0; /* Cor ao passar o mouse sobre o ícone */
+    }
+}
+@media screen and (max-width: 1020px) {
+    /* Esconder a seção de projetos no mobile */
+    section.Projetos .flex {
+        display: none;
+    }
+
+    /* Estilo para o ícone do GitHub */
+    .github-icon {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh; /* Centraliza verticalmente */
+    }
+
+    .github-icon a {
+        font-size: 250px; /* Ajusta o tamanho do ícone */
+        color: #333; /* Cor do ícone, ajuste conforme necessário */
+    }
+
+    .github-icon a:hover {
+        color: #4078c0; /* Cor ao passar o mouse */
+    }
+}
+
+
+body.light {
+    background: #ffffff;
+   
+  }
+
+  body.light ul li a {
+    color: rgb(73, 72, 72); /* Muda a cor dos links para azul no modo light */
+    font-weight: 550;
+}
+
+body.light header nav.menuDesktop a:hover {
+    color: rgb(0, 0, 0);
+    transform: scale(1.05);
+    font-weight: 600;
+}
+
+body.light .btnContato button {
+    background-color: #000000; /* Muda a cor de fundo no modo light */
+    color: rgb(255, 255, 255); /* Muda a cor do texto no modo light */
+}
+
+
+  .light #txtprincipal {
+    color: black;
+}
+
+.light #txtsec {
+    color: black;
+    font-weight: 650;
+}
+
+.light .menu-link{
+    color: black;
+}
+
+body.light .habilidades .titulo {
+    /* Estilos específicos para o modo light */
+    color: #000000; /* Exemplo de cor de texto mais escura */
+}
+
+body.light .txtsobre {
+    color: #000000; /* Cor de texto mais escura para modo light */
+}
+
+body.light .txtsobre h2 {
+    color: #000000; /* Cor específica para o título em modo light */
+}
+
+body.light .Projetos h2 {
+    color: #000000; /* Cor do título em modo light */
+}
+
+body.light .formulario {
+    background-color: #ffffff; /* Fundo claro para modo light */
+    color: #000000; /* Cor de texto mais escura para modo light */
+}
+
+body.light .formulario h2 {
+    color: #000000; /* Cor do título em modo light */
+}
+
+body.light .formulario span {
+    color: #0000ff; /* Cor específica para o texto destacado em modo light */
+}
+
+body.light .formulario input[type="text"],
+body.light .formulario input[type="email"],
+body.light .formulario input[type="tel"],
+body.light .formulario textarea {
+    background-color: #f9f9f9; /* Fundo claro para campos de entrada no modo light */
+    color: #000000; /* Cor do texto nos campos de entrada no modo light */
+    border: 1px solid #ccc; /* Borda leve para os campos no modo light */
+}
+
+body.light .formulario input[type="submit"] {
+    background-color: #0000ff; /* Fundo do botão de envio no modo light */
+    color: #fff; /* Cor do texto do botão no modo light */
+    border: none; /* Remover borda */
+}
+
+body.light .formulario input[type="submit"]:hover {
+    background-color: #0000ff; /* Cor de fundo ao passar o mouse no modo light */
+    transform: scale(1.05); /* Pequena animação ao passar o mouse */
+}
+
+body.light .logofooter img {
+    content: url('images/logo2.png');
+}
+
+body.light .lineFooter.borda p a {
+    color: #000000; /* Cor desejada para o modo light */
+    font-weight: 600;
+}
+
+body.light .language-selector {
+    color: #000000; /* Cor do texto do seletor de idioma no modo claro */
+}
+
+/* Estilo do texto e seta do idioma selecionado no modo claro */
+body.light .language-selector .selected-language {
+    color: #000000; /* Cor do texto do idioma selecionado no modo claro */
+}
+
+/* Estilo das opções do seletor de idioma no modo claro */
+body.light .language-options {
+    color: #ffffff; /* Cor do texto das opções no seletor de idioma */
+    background-color: #000000; /* Cor de fundo das opções no seletor de idioma */
+}
+
+
+.theme-toggle {
+    display: inline-flex;
+    align-items: center;
+    margin-left: 15px; /* Ajuste o espaço entre o botão de contato e o alternador de tema */
+}
+
+/* Mantenha o CSS atual do botão de alternância */
+.btnContato {
+    display: flex;
+    align-items: center;
+}
+
+/* Estilos para o botão de contato */
+.btnContato button {
+    margin-right: 15px; /* Espaçamento entre o botão de contato e o alternador de tema */
+}
+
+/* Estilos para o botão de alternância do tema */
+.theme-toggle {
+    display: flex;
+    align-items: center;
+}
+
+/* Mantenha o CSS atual do botão de alternância */
+.checkbox {
+    opacity: 0;
+    position: absolute;
+}
+
+.label {
+    background-color: #333;
+    border-radius: 50px;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px;
+    position: relative;
+    height: 30px;
+    width: 60px;
+    transform: scale(1);
+    transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+.checkbox:checked + .label {
+    background-color: #4CAF50; /* Cor do botão quando ativado */
+    box-shadow: 0 0 10px #0000ff/* Efeito de sombra quando ativado */
+}
+
+.label .ball {
+    background-color: #fff;
+    border-radius: 50%;
+    position: absolute;
+    top: 4px;
+    left: 4px;
+    height: 22px;
+    width: 22px;
+    transform: translateX(0px);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+.checkbox:checked + .label .ball {
+    transform: translateX(30px); /* Ajustado para a nova largura do botão */
+}
+
+/* Estilo para os ícones */
+.icon {
+    color: #fff;
+    font-size: 18px;
+    transition: opacity 0.3s;
+}
+
+/* Mostrar apenas o ícone correspondente ao modo */
+.sun {
+    opacity: 0; /* Oculta o ícone do sol por padrão */
+}
+
+.checkbox:checked + .label .sun {
+    opacity: 1; /* Mostra o ícone do sol quando ativado */
+}
+
+.checkbox:checked + .label .moon {
+    opacity: 0; /* Oculta o ícone da lua quando ativado */
+}
+
+/* Estilo para os ícones quando o botão está ativado */
+.checkbox:checked + .label {
+    background-color: #ffffff; /* Cor de fundo do botão quando ativado (modo claro) */
+}
+
+.checkbox:checked + .label .sun {
+    color: rgb(0, 0, 0); /* Cor do ícone do sol quando ativado */
+}
+
+@media (max-width: 768px) {
+    .fixed-buttons {
+        bottom: 10px;
+        right: 10px;
+    }
+}
+
+  .language-selector {
+    position: fixed;
+    bottom: 10px;
+    right: -20px;
+    z-index: 1000;
+    font-family: Arial, sans-serif;
+    width: 150px;
+    cursor: pointer;
+}
+
+/* Estilo para o seletor (esconde o estilo padrão) */
+#language-select {
+    display: none; /* Oculta o elemento <select> padrão */
+}
+
+/* Estilo para o texto e a seta do idioma selecionado */
+.selected-language {
+    display: flex;
+    text-align: center;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    color: #ffffff; /* Fonte branca */
+    font-weight: bold; /* Peso maior da fonte */
+    background-color: #343a4000; /* Fundo escuro */
+    border-radius: 5px; /* Bordas arredondadas */
+    position: relative; /* Para posicionar a lista de opções */
+}
+
+/* Estilo para a seta */
+.arrow {
+    font-size: 0px;
+    color: #ffffff; /* Cor da seta */
+}
+
+/* Lista de opções */
+.language-options {
+    display: none; /* Inicialmente oculto */
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    position: absolute;
+    bottom: -5px; /* Ajuste para alinhar com o fundo */
+    right: 0;
+    background-color: transparent; /* Fundo transparente */
+    border-radius: 5px; /* Bordas arredondadas */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3); /* Sombra suave */
+    min-width: 150px; /* Largura mínima para alinhar com o seletor */
+}
+
+/* Itens da lista de opções */
+.language-options li {
+    padding: 8px 10px; /* Reduzido para ajustar o tamanho */
+    color: #ffffff; /* Fonte branca */
+    cursor: pointer;
+    font-size: 14px; /* Tamanho da fonte reduzido */
+    transition: background-color 0.3s ease;
+}
+
+/* Hover sobre itens da lista */
+.language-options li:hover {
+    background-color: rgba(52, 58, 64, 0.7); /* Fundo escuro transparente ao passar o mouse */
+}
+
+/* Mostrar as opções quando o seletor é hover */
+.language-selector:hover .language-options {
+    display: block;
+}
+
+/* Mostrar a seta para cima quando aberto */
+.language-selector.open .arrow {
+    transform: rotate(180deg);
+}
+
+/* Estilos para a seção de Soft Skills */
+.section-softskills {
+    padding: 40px 20px;
+    background-color: #f4f4f4; /* Ajuste conforme o tema do seu site */
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.section-title span {
+    color: #007BFF; /* Ajuste a cor conforme o tema do seu site */
+}
+
+.softskills-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.softskills-item {
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    width: 200px; /* Ajuste conforme a necessidade */
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.softskills-item i {
+    font-size: 2rem; /* Ajuste conforme o tamanho dos ícones */
+    color: #007BFF; /* Ajuste a cor dos ícones conforme o tema do seu site */
+    margin-bottom: 10px;
+}
+
+.softskills-item h3 {
+    font-size: 1.25rem;
+    margin: 10px 0;
+    color: #333;
+}
+
+.softskills-item p {
+    font-size: 0.875rem;
+    color: #666;
+}
+
+.softskills-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+body.light .section-softskills{
+    background-color: #000000;
+}
+
+body.light .section-title{
+    color: white;
+}
+
+body.light .section-title span{
+    color: blue;
+}
+
+

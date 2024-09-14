@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Fontes -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <!-- Fim Fontes -->
+    <!-- Ícones -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    
+    <!-- Fim Ícones -->
+    <link rel="stylesheet" href="style.css">
+    <script src="scripts.js" defer></script>
+    <title>Matheus Silva</title>
+</head>
+
+<body>
+    <header>
+        <div class="interface">
+            <div class="logo">
+                <a href="#inicio">
+                    <img id="logoImage" src="images/logo.png" alt="Logo MS">
+                </a>
+            </div><!-- Fim logo -->
+
+            <nav class="menuDesktop">
+                
+                
+
+
+                </head>
+
+                <body>
+                        <ul>
+                            <li><a href="#inicio" data-i18n = inicio>Início</a></li>
+                            <li><a href="#habilidades" data-i18n = habilidades >Habilidades</a></li>
+                            <li><a href="#sobre" data-i18n = sobre >Sobre mim</a></li>
+                            <li><a href="#projetos" data-i18n = projetos >Projetos</a></li>
+                        </ul>
+            </nav>
+
+            <div class="btnContato">
+                <a href="#formulario" data-i18n="contato"><button>Contato</button></a>
+                <input type="checkbox" class="checkbox" id="chk"/>
+                <label class="label" for="chk">
+                    <i class="bx bx-moon moon-icon"></i>
+                    <i class="bx bx-sun sun-icon"></i>
+                    <div class="ball"></div>
+                </label>
+                    </label>
+                </div>
+            </div>
+
+            <div class="btnAbrir" id="btn-menu">
+                <i class="fa fa-list-ul"></i> <!-- Usando Font Awesome -->
+            </div>
+
+            <div class="menu-mobile" id="menu-mobile">
+                <div class="btnFechar" id="btn-fechar">
+                    <i class="fa fa-times"></i> <!-- Usando Font Awesome -->
+                </div>
+                <nav>
+                    <ul>
+                        <li><a href="#inicio" class="menu-link">Início</a></li>
+                        <li><a href="#habilidades" class="menu-link">Habilidades</a></li>
+                        <li><a href="#sobre" class="menu-link">Sobre</a></li>
+                        <li><a href="#projetos" class="menu-link">Projetos</a></li>
+                        <li><a href="#formulario" class="menu-link">Contato</a></li>
+                    </ul>
+                </nav>
+            </div>
+
+            
+            <div class="overlayMenu" id="overlay"></div>
+
+        </div> <!-- Fim interface -->
+    </header>
+
+    <main>
+
+        <div class="language-selector">
+            <div class="selected-language">
+                Português
+                <span class="arrow">▼</span>
+            </div>
+            <ul class="language-options">
+                <li data-value="pt" data-icon="🇧🇷">Português</li>
+                <li data-value="en" data-icon="🇺🇸">English</li>
+            </ul>
+        </div>
+
+        <section id="inicio" class="topoDoSite">
+            <div class="interface">
+                <div class="flex">
+                    <div class="txtTopoSite">
+                        <h1 data-i18n = txtprincipal id="txtprincipal">DESENVOLVENDO O FUTURO, LINHA POR LINHA<span>.</span></h1>
+                        <p class="pfs" data-i18n = txtsecpro>Pogramador Full-Stack Junior</p>
+                        <p data-i18n = txtsec id="txtsec">"Desenvolvendo o futuro, linha por linha" é mais do que uma simples frase; é a essência do
+                            meu trabalho como programador júnior. Cada linha de <span>código</span> que escrevo é um
+                            passo em direção a soluções inovadoras e eficientes. Embora ainda esteja no início da minha
+                            carreira, estou <span>comprometido</span> em aprender e evoluir constantemente, aplicando
+                            boas práticas e tecnologias modernas para criar aplicações que não apenas funcionam, mas
+                            também impulsionam o <span>futuro</span>. Estou aqui para <span>transformar</span> ideias em
+                            realidade, uma linha de código por vez.</p>
+                        <div class="btnContato">
+                            <a href="#formulario" data-i18n = btncont ><button>Entre em Contato</button></a>
+                        </div> <!-- Fim btnContato -->
+                    </div> <!-- Fim txtTopoSite -->
+
+                    <div class="imgTopoSite">
+                        <img src="images/eu.png" alt="Matheus Silva">
+                    </div> <!-- Fim imgTopoSite -->
+                </div>
+            </div>
+        </section>
+
+        <section id="habilidades" class="habilidades">
+            <div class="interface">
+                <h2 class="titulo" data-i18n="habi">MINHAS <span>HABILIDADES.</span></h2>
+                <div class="flex">
+                    <!-- Habilidade existente -->
+                    <div class="habilidadesBox">
+                        <i class='bx bx-code-alt'></i>
+                        <h3>Landing Pages</h3>
+                        <p data-i18n="land">Criando landing pages eficientes e atraentes que convertem visitantes em clientes. Como programador, utilizo HTML e CSS para desenvolver designs responsivos e otimizar a experiência do usuário, garantindo resultados de alta performance.</p>
+                    </div>
+        
+                    <!-- Habilidade existente -->
+                    <div class="habilidadesBox">
+                        <i class='bx bxl-java'></i>
+                        <h3>Java</h3>
+                        <p data-i18n="java">Desenvolvo soluções robustas e escaláveis utilizando Java. Com foco na eficiência e na performance, aplico boas práticas para criar aplicações seguras e de alta qualidade.</p>
+                    </div>
+        
+                    <!-- Habilidade existente -->
+                    <div class="habilidadesBox">
+                        <i class='bx bxl-javascript'></i>
+                        <h3>JavaScript</h3>
+                        <p data-i18n="js">Crio interfaces dinâmicas e interativas utilizando JavaScript. Com atenção à performance e à experiência do usuário, ofereço soluções rápidas e responsivas para a web.</p>
+                    </div>
+        
+                    <!-- Habilidade existente -->
+                    <div class="habilidadesBox">
+                        <i class='bx bx-server'></i>
+                        <h3>Linux</h3>
+                        <p data-i18n="linux">Trabalho com Linux para oferecer soluções robustas e eficientes. Utilizo minhas habilidades para otimizar sistemas, garantir segurança e automação, e melhorar o desempenho de servidores.</p>
+                    </div>
+        
+                    <!-- Habilidade existente -->
+                    <div class="habilidadesBox">
+                        <i class='bx bxl-postgresql'></i>
+                        <h3>MySQL</h3>
+                        <p data-i18n="sql">Utilizo MySQL para otimizar bancos de dados, garantindo eficiência e integridade dos dados. Com foco em consultas rápidas e manutenção eficaz, asseguro soluções confiáveis para armazenamento e recuperação de informações.</p>
+                    </div>
+        
+                    <!-- Habilidade existente -->
+                    <div class="habilidadesBox">
+                        <i class='bx bxl-mongodb'></i>
+                        <h3>MongoDB</h3>
+                        <p data-i18n="mongo">Utilizo MongoDB para gerenciar dados não relacionais com flexibilidade e escalabilidade. Com foco em performance e eficiência, crio soluções que suportam grandes volumes de dados e requisitos dinâmicos.</p>
+                    </div>
+        
+                    <!-- Nova habilidade: React -->
+                    <div class="habilidadesBox">
+                        <i class='bx bxl-react'></i>
+                        <h3>React</h3>
+                        <p data-i18n="react">Desenvolvo interfaces de usuário interativas e modernas utilizando React. Com ênfase na criação de componentes reutilizáveis e na gestão eficiente de estado, busco proporcionar uma experiência de usuário fluida e responsiva.</p>
+                    </div>
+        
+                    <!-- Nova habilidade: .NET -->
+                    <div class="habilidadesBox">
+                        <i class='bx bxl-visual-studio'></i>
+                        <h3>.NET</h3>
+                        <p data-i18n="NET">Desenvolvo aplicações robustas e escaláveis utilizando .NET, focando na performance e na qualidade do código para criar soluções eficientes.</p>
+                    </div>
+        
+                    <!-- Nova habilidade: Python -->
+                    <div class="habilidadesBox">
+                        <i class='bx bxl-python'></i>
+                        <h3>Python</h3>
+                        <p data-i18n="python">Emprego Python para criar aplicações e scripts eficientes. Com uma abordagem voltada para a automação, análise de dados e desenvolvimento web, busco oferecer soluções práticas e escaláveis para diversos problemas.</p>
+                    </div>
+
+                    <!-- Nova habilidade: C++ -->
+                    <div class="habilidadesBox">
+                        <i class='bx bxl-c-plus-plus'></i>
+                        <h3>C++</h3>
+                        <p data-i18n="cpp">Desenvolvo soluções de alto desempenho utilizando C++. Com foco em eficiência e otimização, aplico boas práticas para criar aplicações robustas e de baixo nível que atendem a requisitos exigentes de performance.</p>
+                    </div>
+                </div><!-- Fim flex -->
+            </div><!-- Fim interface -->
+        </section>
+
+
+        <section id="softskills" class="section-softskills">
+            <div class="container">
+                <h2 class="section-title" data-i18n="softskills">MINHAS <span>SOFT SKILLS</span></h2>
+                <div class="softskills-grid">
+                    <div class="softskills-item">
+                        <i class='bx bx-chat'></i> <!-- Ícone representando comunicação -->
+                        <h3 data-i18n="titulocomunicacao">Comunicação</h3>
+                        <p data-i18n="comunicacao">Habilidade de se expressar claramente e ouvir ativamente, facilitando a compreensão e colaboração com outros.</p>
+                    </div> <!-- Fim softskills-item1 -->
+        
+                    <div class="softskills-item">
+                        <i class='bx bx-group'></i> <!-- Ícone representando trabalho em equipe -->
+                        <h3 data-i18n="titulotrabalhoEquipe">Trabalho em Equipe</h3>
+                        <p data-i18n="trabalhoEquipe">Capacidade de colaborar eficazmente com outras pessoas para atingir objetivos comuns e contribuir para o sucesso do grupo.</p>
+                    </div> <!-- Fim softskills-item2 -->
+        
+                    <div class="softskills-item">
+                        <i class='bx bx-wrench'></i> <!-- Ícone representando resolução de problemas -->
+                        <h3 data-i18n= "tituloresolucaoProblemas">Resolução de Problemas</h3>
+                        <p data-i18n="resolucaoProblemas">Habilidade de identificar, analisar e resolver problemas de maneira eficaz e criativa.</p>
+                    </div> <!-- Fim softskills-item3 -->
+        
+                    <div class="softskills-item">
+                        <i class='bx bx-adjust'></i> <!-- Ícone representando adaptação -->
+                        <h3 data-i18n="tituloadaptacao">Adaptação</h3>
+                        <p data-i18n="adaptacao">Capacidade de se ajustar rapidamente a novas situações e mudanças, mantendo a eficiência e o desempenho.</p>
+                    </div> <!-- Fim softskills-item4 -->
+        
+                    <div class="softskills-item">
+                        <i class='bx bx-smile'></i> <!-- Ícone representando inteligência emocional -->
+                        <h3 data-i18n="titulointeligenciaEmocional">Inteligência Emocional</h3>
+                        <p data-i18n="inteligenciaEmocional">Habilidade de reconhecer, entender e gerenciar suas próprias emoções e as dos outros, melhorando relacionamentos e decisões.</p>
+                    </div> <!-- Fim softskills-item5 -->
+                </div> <!-- Fim softskills-grid -->
+            </div><!-- Fim container -->
+        </section>
+        
+        <section class="Sobre">
+            <div class="interface">
+                <div class="flex">
+                    <div class="imgSobre">
+                        <img src="./images/eu2.jpg" alt="Imagem do Matheus Gabriel">
+                    </div>
+                    <div class="txtsobre">
+                        <h2>Muito Prazer, <span>sou Matheus Gabriel</span></h2>
+                        <p>Tenho 20 anos, sou programador júnior e estudante de <span>Ciência da Computação.</span> Sou apaixonado por tecnologia e sempre busco aprender algo novo. Adoro resolver <span>problemas</span> e encarar desafios no mundo da programação, sempre com vontade de <span>melhorar</span> e evoluir.</p>
+                        <p>Com 1 ano de <span>experiência</span> em Java, banco de dados e Linux, já participei de projetos que me desafiaram a <span>desenvolver</span> soluções eficientes e criativas. Estou sempre em busca de novas oportunidades para <span>expandir</span> meus conhecimentos e contribuir de forma positiva em cada <span>equipe</span> da qual faço parte. Minha meta é crescer na área de tecnologia, me <span>aperfeiçoando</span> continuamente e entregando sempre o meu melhor.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+                
+
+            </div>
+
+        </section>
+
+        <section id="projetos" class="Projetos">
+    
+
+        <section id="projetos" class="Projetos">
+            <div class="interface">
+                <h2 class="titulo" data-i18n =  project >MEUS <span>PROJETOS</span></h2>
+
+                <div class="github-container">
+                    <h2>MEUS PROJETOS:</h2>
+                    <a href="https://github.com/MatheusDev2024" target="_blank">
+                        <i class="fab fa-github"></i> <!-- Ícone GitHub do Font Awesome -->
+                    </a>
+                </div>
+                <div class="flex">
+                    <div class="imgProj"  style="background-image: url(images/Design\ sem\ nome\ \(10\).jpg);">
+                        <div class="overlay">
+                            <div class="text">
+                                <a href="https://github.com/MatheusDev2024"><h3>Lading Page</h3></a>
+                                <p>• HTML5</p>
+                                <p>• CSS3</p>
+                                <p>• JavaScript</p>
+                                
+                            </div>
+                        </div>
+                    </div>
+                    <div class="imgProj"  style="background-image: url(images/Design\ sem\ nome\ \(12\).jpg);">
+                        <div class="overlay">
+                            <div class="text">
+                                <a href="https://github.com/MatheusDev2024"> <h3 data-i18n="calculadora" >CALCULADORA</h3></a>
+                                <p>• JAVA</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="imgProj"  style="background-image: url(images/TEMPO.jpg);">
+                        <div class="overlay">
+                            <div class="text">
+                                <a href="https://github.com/MatheusDev2024"><h3 data-i18n="tempo">Previsão do Tempo</h3></a>
+                                <p>• JavaScript</p>
+                                <p>• CSS3</p>
+                                <p>• HTML5</p>
+                                <p>• API´s</p>
+                                
+                            </div>
+                        </div>
+                    </div>
+                    <div class="imgProj"  style="background-image: url(images/aplicativodecomida.jpg);">
+                        <div class="overlay">
+                            <div class="text">
+                                <a href="https://github.com/MatheusDev2024"> <h3 data-i18n="comida">Aplicativo Delivery</h3></a>
+                                <p>• React-Native</p>
+                                <p>• TailWindCSS</p>
+                                <p>• API REST</p>
+                                <p>• Expo Go</p>
+                                
+                            </div>
+                        </div>
+                    </div>
+                    <div class="imgProj"  style="background-image: url(images/python.jpg);">
+                        <div class="overlay">
+                            <div class="text">
+                                <a href="https://github.com/MatheusDev2024"><h3 data-i18n="pizza">Prever Valor de Pizza</h3></a>
+                                <p>• Python</p>
+                                <p>• Jupyter</p>
+                                <p>• Machine Learning</p>
+                                <p>• IA</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="imgProj"  style="background-image: url(images/net.jpg);">
+                        <div class="overlay">
+                            <div class="text">
+                                <a href="https://github.com/MatheusDev2024"><h3 data-i18n="tarefa">Lista de Tarefas</h3></a>
+                                <p>• .NET 8</p>
+                                <p>• SQL Server</p>
+                                <p>• Visual Code 2022</p>
+                            </div>
+                        </div>
+                    </div>
+                </div><!-- Fim flex -->
+            </div> <!-- Fim interface -->
+        </section>
+
+        <section id="formulario" class="formulario">
+            <div class="interface">
+                <h2 class="titulo" data-i18n =falecmg>FALE <span>COMIGO.</span></h2>
+                <form action="http://localhost:3000/enviar-email" method="POST">
+                    <input type="text" name="nome" id="nome" placeholder="Seu Nome:" required>
+                    <input type="email" name="email" id="email" placeholder="Seu Melhor E-mail:" required>
+                    <input type="tel" name="telefone" id="telefone" placeholder="Seu Número:">
+                    <textarea name="mensagem" id="mensagem" placeholder="Sua Mensagem" required></textarea>
+                    <div class="btnEnviar">
+                        <input type="submit" value="Enviar">
+                    </div>
+                </form>
+                
+            </div> <!-- Fim interface -->
+        </section>
+    </main>
+
+    <footer>
+        <div class="interface">
+            <div class="lineFooter">
+                <div class="flex">
+                    <div class="logofooter">
+                        <img src="images/logo.png" alt="Logo">
+                    </div>
+                    <div class="btnSocial">
+                        <a href="https://www.linkedin.com/in/matheus-silva-1b23bb163/" target="_blank"><button><i
+                                    class='bx bxl-linkedin'></i></button></a>
+                        <a href="https://www.instagram.com/math.gabb_?igsh=MTMzczRqdjh3bGF3cA%3D%3D&utm_source=qr"
+                            target="_blank"><button><i class='bx bxl-instagram'></i></button></a>
+                        <a href="https://github.com/MatheusDev2024" target="_blank"><button><i
+                                    class='bx bxl-github'></i></button></a>
+                    </div>
+                </div>
+            </div> <!-- Fim lineFooter -->
+            <div class="lineFooter borda">
+                <p>
+                    <i class='bx bxl-gmail'></i>
+                    <a href="mailto:mathiaou2003@gmail.com">mathiaou2003@gmail.com</a>
+                </p>
+            </div> <!-- Fim lineFooter -->
+        </div> <!-- Fim interface -->
+    </footer>
+
+    <script
+  src="https://code.jquery.com/jquery-3.7.1.min.js"
+  integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+  crossorigin="anonymous"></script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const menu = document.querySelector('.menuDesktop');
+
+            const observer = new IntersectionObserver(entries => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        menu.classList.add('visible');
+                    }
+                });
+            }, {
+                threshold: 0.1 // Quando 10% do menu estiver visível
+            });
+
+            observer.observe(menu);
+        });
+    </script>
+</body>
+
+</html>
