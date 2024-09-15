@@ -103,7 +103,10 @@ const texts = {
       pizza: 'Prever Valor de Pizza',
       tarefa: 'Lista de Tarefas',
       txtsecpro:'Pogramador Full-Stack Junior',
-      cpp:'Desenvolvo soluções de alto desempenho utilizando C++. Com foco em eficiência e otimização, aplico boas práticas para criar aplicações robustas e de baixo nível que atendem a requisitos exigentes de performance.'
+      cpp:'Desenvolvo soluções de alto desempenho utilizando C++. Com foco em eficiência e otimização, aplico boas práticas para criar aplicações robustas e de baixo nível que atendem a requisitos exigentes de performance.',
+      sobrepra: 'Muito Prazer, <span>sou Matheus Gabriel</span>',
+      sobrep1: 'Tenho 20 anos, sou programador júnior e estudante de <span>Ciência da Computação.</span> Sou apaixonado por tecnologia e sempre busco aprender algo novo. Adoro resolver <span>problemas</span> e encarar desafios no mundo da programação, sempre com vontade de <span>melhorar</span> e evoluir.',
+      sobrep2: 'Com 1 ano de <span>experiência</span> em Java, banco de dados e Linux, já participei de projetos que me desafiaram a <span>desenvolver</span> soluções eficientes e criativas. Estou sempre em busca de novas oportunidades para <span>expandir</span> meus conhecimentos e contribuir de forma positiva em cada <span>equipe</span> da qual faço parte. Minha meta é crescer na área de tecnologia, me <span>aperfeiçoando</span> continuamente e entregando sempre o meu melhor.'
     },
     en: {
       inicio: 'Home',
@@ -149,7 +152,10 @@ const texts = {
       pizza: 'Predict Pizza Value',
       tarefa: 'Task List',
       txtsecpro: 'Junior Full-Stack Programmer',
-      cpp: 'I develop high-performance solutions using C++. With a focus on efficiency and optimization, it applies best practices to create robust, low-level applications that meet demanding performance requirements.'
+      cpp: 'I develop high-performance solutions using C++. With a focus on efficiency and optimization, it applies best practices to create robust, low-level applications that meet demanding performance requirements.',
+      sobrepra: 'Nice to meet you, <span> I´m Matheus Gabriel</span>',
+      sobrep1: 'I´m 20 years old, I´m a junior programmer and a student of <span>Computer Science.</span> I´m passionate about technology and always looking to learn something new. I love solving <span>problems</span> and facing challenges in the world of programming, always wanting to <span>improve</span> and evolve.',
+      sobrep2: 'With 1 year of <span>experience</span> in Java, databases and Linux, I have participated in projects that challenged me to <span>develop</span> efficient and creative solutions. I am always looking for new opportunities to <span>expand</span> my knowledge and contribute positively to each <span>team</span> of which I am part. My goal is to grow in the technology area, continually <span>improving myself</span> and always delivering my best.'
     }
   };
 
