@@ -199,6 +199,14 @@ document.addEventListener('DOMContentLoaded', function() {
     // Seleciona o formulário corretamente usando o novo ID
     const form = document.getElementById('formulario-form'); // Certifique-se de usar o ID correto do form
 
+    // Verifica se o formulário foi corretamente capturado
+    if (form) {
+        console.log("Formulário encontrado:", form); // Confirma que o formulário foi capturado
+    } else {
+        console.error("Formulário não encontrado! Verifique o ID.");
+        return;
+    }
+
     // Adiciona o evento de submit ao formulário
     form.addEventListener('submit', function(e) {
         e.preventDefault(); // Impede o envio padrão do formulário
@@ -212,7 +220,4 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 });
-
-
-
 
