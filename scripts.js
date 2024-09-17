@@ -194,16 +194,18 @@ document.querySelectorAll('.language-options li').forEach(item => {
 
 
 document.addEventListener('DOMContentLoaded', function() {
-    // Inicializa o EmailJS com a chave pública correta
+    // Inicializa o EmailJS com a chave pública
     emailjs.init("xsX5RC_WnmMJagVfu");
 
+    // Seleciona o formulário corretamente usando o id
+    const form = document.getElementById('formulario'); // Captura o formulário pelo ID
+
     // Adiciona o evento de submit ao formulário
-    const form = document.getElementById('formulario'); // Captura o elemento do formulário
     form.addEventListener('submit', function(e) {
         e.preventDefault(); // Impede o envio padrão do formulário
 
-        // Envia o formulário via EmailJS
-        emailjs.sendForm('service_jqfc36qD', 'template_98dh1sq', form)  // Aqui usamos o próprio elemento do formulário
+        // Envia o formulário via EmailJS, passando o elemento form
+        emailjs.sendForm('service_jqfc36qD', 'template_98dh1sq', form)
         .then(function() {
             alert('Mensagem enviada com sucesso!');
         }, function(error) {
