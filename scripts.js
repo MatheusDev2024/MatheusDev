@@ -193,9 +193,20 @@ document.querySelectorAll('.language-options li').forEach(item => {
 });
 
 
-
 document.addEventListener('DOMContentLoaded', function() {
-    const element = document.getElementById('txtprincipal');
-    element.style.width = element.scrollWidth + 'px';
-});
+    // Inicializar o EmailJS
+    emailjs.init("xsX5RC_WnmMJagVfu");
 
+    // Adiciona o evento de submit ao formulário
+    document.querySelector('#formulario').addEventListener('submit', function(e) {
+        e.preventDefault(); // Impede o envio padrão do formulário
+
+        // Envia o formulário via EmailJS
+        emailjs.sendForm('service_jqfc36qD', 'template_98dh1sq', '#formulario')
+        .then(function() {
+            alert('Mensagem enviada com sucesso!');
+        }, function(error) {
+            alert('Ocorreu um erro ao enviar sua mensagem. Erro: ' + JSON.stringify(error));
+        });
+    });
+});
