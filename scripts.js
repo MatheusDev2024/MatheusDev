@@ -212,7 +212,7 @@ document.addEventListener('DOMContentLoaded', function() {
         e.preventDefault(); // Impede o envio padrão do formulário
 
         // Envia o formulário via EmailJS, passando o elemento form
-        emailjs.sendForm('service_ha9i6at', 'template_98dh1sq', form)
+        emailjs.sendForm('service_zjbgodc', 'template_98dh1sq', form)
         .then(function() {
             alert('Mensagem enviada com sucesso!');
         }, function(error) {
