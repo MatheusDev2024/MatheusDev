@@ -206,7 +206,7 @@ document.addEventListener('DOMContentLoaded', function() {
         .then(function() {
             alert('Mensagem enviada com sucesso!');
         }, function(error) {
-            alert('Ocorreu um erro ao enviar sua mensagem. Erro: ' + JSON.stringify(error));
+            console.error('Erro ao enviar:', error);  // Mostra o erro no console
         });
     });
 });
