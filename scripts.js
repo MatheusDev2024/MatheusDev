@@ -192,13 +192,12 @@ document.querySelectorAll('.language-options li').forEach(item => {
     });
 });
 
-
 document.addEventListener('DOMContentLoaded', function() {
     // Inicializa o EmailJS com a chave pública
     emailjs.init("xsX5RC_WnmMJagVfu");
 
-    // Seleciona o formulário corretamente usando o id
-    const form = document.getElementById('formulario'); // Captura o formulário pelo ID
+    // Seleciona o formulário corretamente usando o novo ID
+    const form = document.getElementById('formulario-form'); // Certifique-se de usar o ID correto do form
 
     // Adiciona o evento de submit ao formulário
     form.addEventListener('submit', function(e) {
