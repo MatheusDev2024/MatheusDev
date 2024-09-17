@@ -195,14 +195,15 @@ document.querySelectorAll('.language-options li').forEach(item => {
 
 document.addEventListener('DOMContentLoaded', function() {
     // Inicializa o EmailJS com a chave pública correta
-    emailjs.init("xsX5RC_WnmMJagVfu");  // Certifique-se de que esta é a chave pública correta
+    emailjs.init("xsX5RC_WnmMJagVfu");
 
     // Adiciona o evento de submit ao formulário
-    document.querySelector('#formulario').addEventListener('submit', function(e) {
+    const form = document.getElementById('formulario'); // Captura o elemento do formulário
+    form.addEventListener('submit', function(e) {
         e.preventDefault(); // Impede o envio padrão do formulário
 
         // Envia o formulário via EmailJS
-        emailjs.sendForm('service_jqfc36qD', 'template_98dh1sq', this)  // 'this' refere-se ao próprio formulário
+        emailjs.sendForm('service_jqfc36qD', 'template_98dh1sq', form)  // Aqui usamos o próprio elemento do formulário
         .then(function() {
             alert('Mensagem enviada com sucesso!');
         }, function(error) {
@@ -210,6 +211,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 });
+
 
 
 

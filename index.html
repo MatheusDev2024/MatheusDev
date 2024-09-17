@@ -22,6 +22,7 @@
     <title>Matheus Silva</title>
 
     <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
+
 <script type="text/javascript">
    (function(){
       emailjs.init("service_jqfc36q");
@@ -352,18 +353,18 @@
             </div> <!-- Fim interface -->
         </section>
 
-        <se<section id="formulario" class="formulario">
+        <section id="formulario" class="formulario">
             <div class="interface">
                 <h2 class="titulo" data-i18n="falecmg">FALE <span>COMIGO.</span></h2>
-                <form id="formulario" method="POST">
-                    <input type="text" data-i18n="name" name="nome" id="nome" placeholder="Seu Nome:" required>
-                    <input type="email" data-i18n="email" name="email" id="email" placeholder="Seu Melhor E-mail:" required>
-                    <input type="tel" data-i18n="number" name="telefone" id="telefone" placeholder="Seu Número:">
-                    <textarea name="mensagem" data-i18n="mesage" id="mensagem" placeholder="Sua Mensagem" required></textarea>
+                <form id="formulario">
+                    <input type="text" name="nome" id="nome" placeholder="Seu Nome:" required>
+                    <input type="email" name="email" id="email" placeholder="Seu Melhor E-mail:" required>
+                    <input type="tel" name="telefone" id="telefone" placeholder="Seu Número:">
+                    <textarea name="mensagem" id="mensagem" placeholder="Sua Mensagem" required></textarea>
                     <div class="btnEnviar">
                         <input type="submit" value="Enviar">
                     </div>
-                </form>
+                </form>                
             </div>
         </section>
         
